@@ -33,8 +33,8 @@
 						exit;
 					}
 				} else {
-					echo file_get_contents("forms/login.html");
-					echo file_get_contents("forms/create.html");	
+					echo file_get_contents("forms/login.php");
+					echo file_get_contents("forms/create.php");	
 				}
 			}
 		?>
