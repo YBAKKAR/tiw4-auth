@@ -4,7 +4,7 @@
             <div class="panel-title">Créer votre compte Wahoo!</div>
         </div>
         <div class="panel-body" >
-            <form id="signupform" class="form-horizontal" role="form">
+            <form id="signupform" class="form-horizontal" role="form" action="register.php" method="post">
                 <div class="form-group">
                     <label for="username" class="col-md-3 control-label">Login</label>
                     <div class="col-md-9">

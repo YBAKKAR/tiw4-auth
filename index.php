@@ -17,37 +17,34 @@
 	<body>
 
 		<?php
-		session_start();
-		if(isset($_SESSION['error']))
-		{
-		echo '<p>'.$_SESSION['error']['username'].'</p>';
-		echo '<p>'.$_SESSION['error']['email'].'</p>';
-		echo '<p>'.$_SESSION['error']['password'].'</p>';
-		unset($_SESSION['error']);
-		}
-		?>
-
-		<?php
 			session_start();
-			include('conf/db.inc');
-
-			if(isset($_POST['submit']))
+			if(isset($_SESSION['username']))
 			{
-				$email = trim($_POST['email']);
-				$password = trim($_POST['password']);
-				$query = "SELECT * FROM user WHERE email='$email' AND password='$password'";
-				$result = mysqli_query($mysqli,$query)or die(mysqli_error());
-				$num_row = mysqli_num_rows($result);
-				$row=mysqli_fetch_array($result);
-
-				if( $num_row ==1 )
-				{
-					$_SESSION['user_name']=$row['username'];
-					header("Location: home.php");
-					exit;
-				}
+				header("Location: home.php");
 			} else {
-				echo file_get_contents("forms/login.php");
+				if(isset($_GET['submit']))
+				{
+					include('conf/db.inc');
+					$username = trim($_GET['username']);
+					$password = trim($_GET['password']);
+					$query = "SELECT * FROM user WHERE username='$username' AND password='$password'";
+					$result = mysqli_query($mysqli,$query)or die(mysqli_error());
+					$num_row = mysqli_num_rows($result);
+					$row=mysqli_fetch_array($result);
+
+					if( $num_row == 1 )
+					{
+						$_SESSION['username']=$row['username'];
+						header("Location: home.php");
+						exit;
+					} else {
+						echo "Erreur d'identification";
+						exit;
+					}
+				} else {
+					echo file_get_contents("forms/login.php");
+					echo file_get_contents("forms/create.php");	
+				}
 			}
 		?>
 
