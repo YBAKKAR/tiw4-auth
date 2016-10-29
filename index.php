@@ -46,11 +46,8 @@
 					header("Location: home.php");
 					exit;
 				}
-				else
-				{
-					echo file_get_contents("forms/login.php");
-				}
-
+			} else {
+				echo file_get_contents("forms/login.php");
 			}
 		?>
 
