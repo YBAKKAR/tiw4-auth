@@ -48,7 +48,7 @@
 				}
 				else
 				{
-					include 'forms/login.php';
+					echo file_get_contents("forms/login.php");
 				}
 
 			}
