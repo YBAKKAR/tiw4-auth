@@ -1,7 +1,7 @@
 <?php
 
 	$db_host = 'localhost';
-	$db_user = 'root';
+	$db_user = 'wahoo';
 	$db_pass = 'iwued4_afiver';
 	$db_base = 'wahoo_accounts';
 
