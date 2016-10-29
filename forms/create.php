@@ -3,6 +3,7 @@
     <div class="panel panel-info">
         <div class="panel-heading">
             <div class="panel-title">Créer votre compte Wahoo!</div>
+            <div style="float:right; font-size: 85%; position: relative; top:-10px"><a id="signinlink" href="#" onclick="$('#signupbox').hide(); $('#loginbox').show()">Se connecter</a></div>
         </div>
         <div class="panel-body" >
             <form id="signupform" class="form-horizontal" role="form" action="register.php" method="post">
