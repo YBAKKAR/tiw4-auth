@@ -27,7 +27,7 @@
                 </div>
                 <div class="form-group">
                     <div class="col-md-offset-3 col-md-9">
-                        <input id="btn-signup" type="submit" class="btn btn-info" name="submit" type="submit" value="Submit"/>
+                        <input id="btn-signup" type="submit" class="btn btn-info" name="submit" type="submit" value="Valider"/>
                     </div>
                 </div>
             </form>

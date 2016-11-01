@@ -20,7 +20,7 @@
 					</div>
 					<div style="margin-top:10px" class="form-group">
 
-						<div class="col-sm-12 controls"><button type="submit" class="btn btn-success">Connexion</i></button></div>
+						<div class="col-sm-12 controls"><input id="btn-signup" type="submit" class="btn btn-info" name="submit" type="submit" value="Se connecter"/></div>
 					</div>
 					<div class="form-group">
 						<div class="col-md-12 control">
