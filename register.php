@@ -76,9 +76,9 @@
 
 										if($sentmail)
 										{
-										echo "<p class="bg-success">Un mail de confirmation vous a été envoyé à l'adresse $email.</p>";
+										echo "<p class=\"bg-success\">Un mail de confirmation vous a été envoyé à l'adresse $email.</p>";
 										} else {
-											echo "<p class="bg-danger">Erreur lors de l'envoi du mail de confirmation.</p>";
+											echo "<p class=\"bg-danger\">Erreur lors de l'envoi du mail de confirmation.</p>";
 										}
 									}
 								}
