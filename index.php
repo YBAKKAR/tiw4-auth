@@ -10,6 +10,11 @@
 		<?php
 			session_start();
 
+			if(isset($_GET['action']=='logout'))
+			{
+				session_destroy();
+			}
+
 			if(isset($_SESSION['error']))
 			{
 				echo '<p>'.$_SESSION['error']['username'].'</p>';
