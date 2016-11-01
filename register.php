@@ -4,6 +4,11 @@
 
 	include('conf/db.inc');
 
+echo $_POST['username'];
+echo $_POST['email'];
+echo $_POST['password'];
+
+
 	if(isset($_POST['submit']))
 	{
 		if($_POST['username'] == '')
