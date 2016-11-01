@@ -34,12 +34,13 @@
 								} else {
 									if(preg_match("/^([a-zA-Z0-9])+([a-zA-Z0-9._-])*@([a-zA-Z0-9_-])+([a-zA-Z0-9._-]+)+$/", $_POST['email']))
 									{
+										$username = $_POST['username'];
 										$email= $_POST['email'];
-										$sql1 = "SELECT * FROM user WHERE email = '$email'";
+										$sql1 = "SELECT * FROM user WHERE email = '$email' OR username= '$username'";
 										$result1 = mysqli_query($mysqli,$sql1) or die(mysqli_error());
 										if (mysqli_num_rows($result1) > 0)
 										{
-											$_SESSION['error']['email'] = "Un compte existe déjà avec cet e-mail.";
+											$_SESSION['error']['email'] = "Un compte existe déjà avec cet identifiant ou email.";
 										}
 									} else {
 										$_SESSION['error']['email'] = "E-mail non valide";
