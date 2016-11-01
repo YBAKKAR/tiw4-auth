@@ -17,9 +17,11 @@
 
 			if(isset($_SESSION['error']))
 			{
-				echo '<p>'.$_SESSION['error']['username'].'</p>';
-				echo '<p>'.$_SESSION['error']['email'].'</p>';
-				echo '<p>'.$_SESSION['error']['password'].'</p>';
+				echo "<div id="error-message" style="margin-top:50px;" class="mainbox col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2">"
+				echo '<p class="text-danger">'.$_SESSION['error']['username'].'</p>';
+				echo '<p class="text-danger">'.$_SESSION['error']['email'].'</p>';
+				echo '<p class="text-danger">'.$_SESSION['error']['password'].'</p>';
+				echo "</div>";
 				unset($_SESSION['error']);
 			}
 
