@@ -29,14 +29,14 @@
 							<?php echo "Bonjour ".$_SESSION['username']." !"; ?>
 						</div>
 
-						<div id="message" class="bg-danger">>
+						<div id="message" class="bg-danger">
 							<?php echo "Ce compte possède un compte SSH valide"; ?>
 						</div>
 
 						<div class="form-group">
 							<div class="col-md-12 control">
 								<div style="border-top: 1px solid#888; padding-top:15px; font-size:85%">
-									<a href="/login.php?action=logout" onClick="$('#loginbox').hide(); $('#signupbox').show()">Se déconnecter</a>
+									<a href="/index.php?action=logout" onClick="$('#loginbox').hide(); $('#signupbox').show()">Se déconnecter</a>
 								</div>
 							</div>
 						</div>
