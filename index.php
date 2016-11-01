@@ -9,6 +9,15 @@
 
 		<?php
 			session_start();
+
+			if(isset($_SESSION['error']))
+			{
+				echo '<p>'.$_SESSION['error']['username'].'</p>';
+				echo '<p>'.$_SESSION['error']['email'].'</p>';
+				echo '<p>'.$_SESSION['error']['password'].'</p>';
+				unset($_SESSION['error']);
+			}
+
 			if(isset($_SESSION['username']))
 			{
 				header("Location: home.php");
